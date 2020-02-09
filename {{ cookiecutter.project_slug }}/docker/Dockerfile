@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install --upgrade pip
 
 COPY ./requirements.txt /requirements.txt
+COPY ./setup.py /setup.py
 RUN pip install -r /requirements.txt
 
 ARG UID
